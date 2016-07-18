@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div class="container">
+
+
+<h2>Correlation rank of country currency</h2>
+
+
+<ul>
+
+{% for r in rlist %}
+    <li>{{ r.name }} : {{r.value}} </li>
+{% endfor %}
+
+</ul>
+
+</div>
+{% endblock %}
