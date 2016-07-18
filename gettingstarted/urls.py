@@ -11,7 +11,8 @@ import hello.views
 
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
-    url(r'^bond', hello.views.bond, name='bond'),
+    url(r'^bond/(?P<country>\w+)/', hello.views.bond),
+    url(r'^image/bond_image/(?P<country>\w+)/',hello.views.bond_image),
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
 ]
